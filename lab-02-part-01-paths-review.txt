@@ -77,17 +77,17 @@ mkdir -p stuff/more-stuff
 
 ==========
 12. If you're in your Desktop directory, how would you change to two directories right above it (again, this should be /Users) using a relative path?  Write your command below.
-cd /home/desktop/uesr
+cd /home/desktop/users
 
 
 
 ==========
 13. What's the shortcut for changing to the directory that you were just previously in?  For example, if I were in /Volumes... and I changed to /Users/profesor/Desktop, what's a quick way of changing to /Volumes without writing something like cd /Volumes?
-----------
+ /users/peichen/desktop/volumes
 
 ==========
 14. How would you show all of the files (including hidden ones) with detailed (long) information that are on you're Desktop if you're in your home directory?  Write your command below.
-----------
+ls  -a -tl
 
 ==========
 Optional Challenge:
