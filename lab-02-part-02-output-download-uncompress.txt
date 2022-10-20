@@ -17,7 +17,11 @@ We're going to be echoing stuff to the console and cleaning it up.
 $ echo hello
 
 Copy and paste the output below.
-----------
+hello
+peichen@Peis-MacBook-Pro ~ % 
+
+
+
 
 
 
@@ -27,7 +31,8 @@ Copy and paste the output below.
 $ echo hello there
 
 Copy and paste the output below.
-----------
+hello there
+peichen@Peis-MacBook-Pro ~ % 
 
 
 
@@ -37,7 +42,7 @@ Copy and paste the output below.
 $ echo good mornin'
 
 Copy and paste the output below.
-----------
+quote> 
 
 
 
@@ -55,7 +60,8 @@ Type [CTRL + C] to get your prompt back.
 $ echo "good mornin'"
 
 Copy and paste the output below.
-----------
+good mornin'
+
 
 
 
@@ -65,7 +71,8 @@ Copy and paste the output below.
 $ echo *
 
 What happens?
-----------
+Applications Creative Cloud Files Desktop Documents Downloads Library Movies Music Pictures Public aardvark mtec1003 mtech1--3
+It displays all the different directories
 
 
 
@@ -73,7 +80,7 @@ What happens?
 7. Ok... that's a lot of output.  How do we clean up our screen so that it's empty again?
 
 Write the command that you used below:
-----------
+ control + c
 
 
 
@@ -86,7 +93,13 @@ We're going to practice downloading files from a web site.  We'll use this pract
 $ curl google.com
 
 Copy and paste the output below.
-----------
+<HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
+<TITLE>301 Moved</TITLE></HEAD><BODY>
+<H1>301 Moved</H1>
+The document has moved
+<A HREF="http://www.google.com/">here</A>.
+</BODY></HTML>
+
 
 
 
@@ -96,7 +109,7 @@ Copy and paste the output below.
 $ curl www.google.com
 
 Copy and paste the output below, but not the whole thing!  Just copy up to the part that has the title tags (<title>......</title>).
-----------
+<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="en"><head><meta content="Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for." name="description"><meta content="noodp" name="robots"><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><meta content="/images/branding/googleg/1x/googleg_standard_color_128dp.png" itemprop="image"><title>Google</title><script nonce="4nIV0PwhSaGiA90PcJWFww">(function(){window.g
 
 
 
@@ -104,7 +117,10 @@ Copy and paste the output below, but not the whole thing!  Just copy up to the p
 10. That's great, but what if I want to save the file?  What flag/option and option argument would I use to download the page to a file called google.html?  Run it to download the URL www.google.com.
 
 Write the command you used below.  Also copy and paste the output below.
-----------
+% curl -o google.html http://google.com
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   219  100   219    0     0   3685      0 --:--:-- --:--:-- --:--:--  4211
 
 
 
@@ -112,7 +128,7 @@ Write the command you used below.  Also copy and paste the output below.
 11. Now let's download the lab file for this homework.  First, figure out what directory you're in.
 
 Write the command you used to determine your directory.  Also, copy and paste the output below.
-----------
+pwd
 
 
 
@@ -120,13 +136,13 @@ Write the command you used to determine your directory.  Also, copy and paste th
 12. If you're not in your home directory, change to it (use the shortcut).
 
 Write the command that you used to change to your home directory.  If you were already in your home directory, write the command that you *would* have used to change to it!
-----------
+cd /home
 
 
 
 ==========
 13. So... the lab materials are located at this url:
-
+.
 https://entertainmenttechnology.github.io/Viera-MTEC1003-fall-2018/mtec1003-lab-02.zip
 
 Download the file using curl... to a file called mtec1003-lab-02.zip using the commandline.  
@@ -136,7 +152,8 @@ REMEMBER to use the -o flag, and follow it with a .zip extension!
 Use ls to verify that it downloaded.
 
 Write down the command that you used to download the file below.  Additionally, write the output of the command below.
-----------
+
+Hey Professor, this is the question I spoke to you about in class where when I entered the command it says " curl: (23) Failure writing output to destination"
 
 
 
@@ -144,7 +161,8 @@ Write down the command that you used to download the file below.  Additionally, 
 14. We learned a command to uncompress a .zip file.  Use it to extract the files and folders from the file you just downloaded.
 
 Write down the command that you used to uncompress the file.
-----------
+
+unzip mtec1003-lab-02.zip
 
 
 
@@ -152,7 +170,8 @@ Write down the command that you used to uncompress the file.
 15. Change to the directory that was just created.  List the contents (of the directory that was extracted from the labs .zip file). 
 
 Copy and paste the output below.
-----------
+no such user or named directory: mtec1003-lab-02.zip
+peichen@Peis-MacBook-Pro /home % 
 
 
 
@@ -162,7 +181,11 @@ We're going to mess around with archiving and compressing files.  We'll make a d
 ==========
 16. Go back up to your home directory.  Create a directory called stuff.  List the contents of your home directory to prove that the directory was created.
 
-Copy and paste the output below.
+Applications		Library			aardvark
+Creative Cloud Files	Movies			google.html
+Desktop			Music			mtec1003
+Documents		Pictures		mtech1--3
+Downloads		Public			stuff
 ----------
 
 
@@ -175,19 +198,19 @@ $ echo "hi" > hello.txt
 List the files in the directory you're currently in (which should be stuff).  
 
 Copy and paste the output below.
-----------
+hello.txt
 
 
 
 ==========
-18. Go up one directory back into your home directory.  Run the following commands exactly to create a compressed archive of the stuff folder.
+18. Go up one directory back into your home directory.  Run the following commands exactly to create a compressed archive ofls  the stuff folder.
 
 $ tar -cvf stuff.tar stuff
 
 List the files in the directory you're currently in (which should be home).  
 
 Copy and paste the output below.
-----------
+tar: Failed to open 'stuff.tar' 
 
 
 
@@ -197,7 +220,7 @@ Copy and paste the output below.
 $ tar -cvf stuff.tar stuff
 
 Copy and paste the output below.
-----------
+tar: Failed to open 'stuff.tar'
 
 
 
@@ -205,7 +228,11 @@ Copy and paste the output below.
 20. List the files in the directory you're currently in (which should be home).  
 
 Copy and paste the output below. (It should contain stuff.tar)
-----------
+Applications		Library			aardvark
+Creative Cloud Files	Movies			google.html
+Desktop			Music			mtec1003
+Documents		Pictures		mtech1--3
+Downloads		Public			stuff
 
 
 
@@ -215,7 +242,7 @@ Copy and paste the output below. (It should contain stuff.tar)
 gzip stuff.tar
 
 List your files again.... you should have a new file with a .gz extension.  Copy and paste the output of your this below.
-----------
+gzip: can't stat: stuff.tar (stuff.tar): No such file or directory
 
 
 
@@ -238,7 +265,8 @@ List the files.  Copy and paste the output below (stuff.tar.gz should be there).
 $ tar -xvf stuff.tar.gz
 
 List the files.  Copy and paste the output below (the folder, stuff, should be there).
-----------
+
+Hi Professor,there was an error when using the command 
 
 
 
@@ -257,10 +285,12 @@ https://entertainmenttechnology.github.io/Viera-MTEC1003-fall-2018/secret.tar.gz
 REMEMBER to use the -o flag and specifiy a filenmae that ends in .tar.gz
 
 Write out the commands that you used to do this.
-----------
+ 
+ Hi Professor I received a 404 error when I tried to download this file.
 
-
+curl -o stuff.tar.gz https://entertainmenttechnology.github.io/Viera-MTEC1003-fall-2018/secret.tar.gz 
 
 ==========
 26. How many files were in the archive.  What were their names?  Write out your answers below.
-----------
+There was a fialure in writing output to destination
+   
